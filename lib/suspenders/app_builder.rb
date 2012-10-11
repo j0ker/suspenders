@@ -182,6 +182,10 @@ module Suspenders
       run "#{path_addition} hub create #{repo_name}"
     end
 
+    def copy_libraries
+      copy_file 'override_recipient_smtp.rb', 'lib/override_recipient_smtp.rb'
+    end
+
     def copy_miscellaneous_files
       copy_file 'errors.rb', 'config/initializers/errors.rb'
       copy_file 'time_formats.rb', 'config/initializers/time_formats.rb'
